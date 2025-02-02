@@ -37,7 +37,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>./TestNg1.xml</suiteXmlFile>
                     </suiteXmlFiles>
-
                 </configuration>
             </plugin>
             <plugin>
