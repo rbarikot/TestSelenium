@@ -34,9 +34,7 @@
                         <browser>${browser}</browser>
                         <trigger>${trigger}</trigger>
                     </systemPropertyVariables>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>./TestNg1.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+
                 </configuration>
             </plugin>
             <plugin>
