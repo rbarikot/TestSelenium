@@ -1,37 +1,20 @@
 pipeline {
-    agent{
-       node
-       {
-       label 'master'
-       }
-    }
-
-    environment {
-        // Define path to your Maven installation and any other environment variables
-        MAVEN_HOME = 'C://Users//rbarik//Desktop//DA RC//Software//apache-maven-3.9.8-bin//apache-maven-3.9.8'  // Adjust this path if necessary
-        GRID_URL = 'http://localhost:4444/wd/hub' // URL of your Selenium Grid Hub
-        JAVA_HOME='C://Program Files//Java//jdk-17'
-    }
+    agent any
 
     tools {
-        maven 'Maven'  // Adjust according to your Maven installation
+        maven 'mvn'  // Adjust according to your Maven installation
         jdk 'JDK'  // Adjust according to your Java version
     }
 
     stages {
         stage('check Git version') {
                 steps {
-                    sh 'git --version'
+                    bat 'git --version'
                 }
         }
         stage('Clone Repository') {
             steps {
-                script {
-                    checkout([$class: 'GitSCM',
-                        branches: [[name: '*/master']],  // Replace with your branch
-                        userRemoteConfigs: [[url: 'https://github.com/rbarikot/TestSelenium.git']]
-                    ])
-                }
+                git branch: 'master' , url:'https://github.com/rbarikot/TestSelenium.git'
             }
         }
 
@@ -39,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Start Selenium Grid Docker containers
-                    sh 'docker-compose -f docker-compose-v3.yml up -d'
+                    bat 'docker-compose -f docker-compose-v3.yml up -d'
                 }
             }
         }
@@ -48,7 +31,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests using Maven
-                    sh 'mvn clean test'
+                    bat 'mvn clean test'
                 }
             }
         }
@@ -57,7 +40,7 @@ pipeline {
             steps {
                 script {
                     // Stop Selenium Grid Docker containers
-                    sh 'docker-compose -f docker-compose-v3.yml down'
+                    bat 'docker-compose -f docker-compose-v3.yml down'
                 }
             }
         }
@@ -72,7 +55,7 @@ pipeline {
     post {
         always {
             // Cleanup actions like removing Docker containers after test execution
-            sh 'docker-compose -f docker-compose-v3.yml down'
+            bat 'docker-compose -f docker-compose-v3.yml down'
         }
         success {
             echo "Tests completed successfully!"
