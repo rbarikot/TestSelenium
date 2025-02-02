@@ -51,11 +51,7 @@ pipeline {
                 allure includeProperties: false, reportBuildPolicy: 'ALWAYS', results: [[path: 'allure-results']]
             }
         }
-        stage('Open Allure Report') {
-             steps {
-                  bat 'allure serve target/allure-results'
-             }
-        }
+        
     }
 
     post {
