@@ -4,6 +4,7 @@ pipeline {
     tools {
         maven 'mvn'  // Adjust according to your Maven installation
         jdk 'JDK'  // Adjust according to your Java version
+        allure 'Allure'
     }
 
     stages {
