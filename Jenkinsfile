@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters {
+            string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for testing')
+            string(name: 'TRIGGER', defaultValue: 'local', description: 'Triggering Test in Local or Remote')
+        }
 
     tools {
         maven 'mvn'  // Adjust according to your Maven installation
@@ -32,7 +36,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests using Maven
-                    bat 'mvn clean test'
+                    bat 'mvn clean test -Dbrowser=${BROWSER} -Dtrigger=${TRIGGER}'
                 }
             }
         }
@@ -51,7 +55,7 @@ pipeline {
                 allure includeProperties: false, reportBuildPolicy: 'ALWAYS', results: [[path: 'allure-results']]
             }
         }
-        
+
     }
 
     post {

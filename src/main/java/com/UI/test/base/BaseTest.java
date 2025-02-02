@@ -8,10 +8,15 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
     protected WebDriver driver;
+    protected static String browser;
+    protected static String trigger;
 
     @BeforeMethod
     public synchronized void setUp(){
-        DriverManager.initDriver(FrameworkConstants.BROWSER,FrameworkConstants.TRIGGER);
+        //DriverManager.initDriver(FrameworkConstants.BROWSER,FrameworkConstants.TRIGGER);
+        browser = System.getProperty("browser",FrameworkConstants.BROWSER);
+        trigger = System.getProperty("trigger",FrameworkConstants.TRIGGER);
+        DriverManager.initDriver(browser,trigger);
         driver = DriverManager.getDriver();
         driver.get("https://www.facebook.com/login/");
     }

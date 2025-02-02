@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7fcfc4e-744f-41e7-ba0d-6380117f1d35" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/UI/constants/FrameworkConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/UI/constants/FrameworkConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/UI/test/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/UI/test/base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +91,7 @@
       <recent name="com.UI.main.driver" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/rbarik/Desktop/DA RC/Workspace/ProwessSeleniumTest/TestNg1.xml">
+  <component name="RunManager" selected="TestNG.LoginTest.testLogin">
     <configuration name="C:/Users/rbarik/Desktop/DA RC/Workspace/ProwessSeleniumTest/TestNg1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProwessSeleniumTest" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/TestNg1.xml" />
@@ -170,9 +174,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.testLogin" />
         <item itemvalue="TestNG.C:/Users/rbarik/Desktop/DA RC/Workspace/ProwessSeleniumTest/TestNg1.xml" />
         <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.LoginTest.testLogin" />
         <item itemvalue="TestNG.LoginTest1" />
         <item itemvalue="TestNG.LoginTest1.testLogin" />
       </list>
@@ -195,7 +199,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738129355948</updated>
       <workItem from="1738129356898" duration="22879000" />
-      <workItem from="1738463387641" duration="5491000" />
+      <workItem from="1738463387641" duration="6760000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
