@@ -19,11 +19,14 @@ pipeline {
                     sh 'git --version'
                 }
         }
-        stage('Clone Repository') {
-            steps {
-                git branch: 'master', url: 'https://github.com/rbarikot/TestSelenium.git'
+        steps {
+                script {
+                    checkout([$class: 'GitSCM',
+                        branches: [[name: '*/master']],  // Replace with your branch
+                        userRemoteConfigs: [[url: 'https://github.com/rbarikot/TestSelenium.git']]
+                    ])
+                }
             }
-        }
 
         stage('Start Docker Compose') {
             steps {
