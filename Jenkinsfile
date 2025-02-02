@@ -14,6 +14,11 @@ pipeline {
     }
 
     stages {
+        stage('check Git version') {
+                steps {
+                    sh 'git --version'
+                }
+        }
         stage('Clone Repository') {
             steps {
                 git branch: 'master', url: 'https://github.com/rbarikot/TestSelenium.git'
