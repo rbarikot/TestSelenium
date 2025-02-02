@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent{
+       node
+       {
+       label 'master'
+       }
+    }
 
     environment {
         // Define path to your Maven installation and any other environment variables
