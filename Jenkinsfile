@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    parameters {
-            string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for testing')
-            }
-
     tools {
         maven 'mvn'  // Adjust according to your Maven installation
         jdk 'JDK'  // Adjust according to your Java version
@@ -35,7 +31,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests using Maven
-                    bat 'mvn clean test -Dbrowser=${BROWSER}'
+                    bat 'mvn clean test'
                 }
             }
         }

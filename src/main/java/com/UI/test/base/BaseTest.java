@@ -13,10 +13,7 @@ public class BaseTest {
 
     @BeforeMethod
     public synchronized void setUp(){
-        //DriverManager.initDriver(FrameworkConstants.BROWSER,FrameworkConstants.TRIGGER);
-        browser = System.getProperty("browser","chrome");
-        //trigger = System.getProperty("trigger","local");
-        DriverManager.initDriver(browser,FrameworkConstants.TRIGGER);
+        DriverManager.initDriver(FrameworkConstants.BROWSER,FrameworkConstants.TRIGGER);
         driver = DriverManager.getDriver();
         driver.get("https://www.facebook.com/login/");
     }

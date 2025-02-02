@@ -19,15 +19,15 @@ public class DriverManager {
             try {
                 URL gridUrl = new URL("http://localhost:4444/wd/hub");
 
-                if (browser.equalsIgnoreCase("chrome")&& trigger.equalsIgnoreCase("remote")) {
+                if (browser.equalsIgnoreCase(String.valueOf(DriverType.CHROME))&& trigger.equalsIgnoreCase("remote")) {
                     ChromeOptions options = new ChromeOptions();
                     driver.set(new RemoteWebDriver(gridUrl, options));
-                } else if (browser.equalsIgnoreCase("firefox")&& trigger.equalsIgnoreCase("remote")) {
+                } else if (browser.equalsIgnoreCase(String.valueOf(DriverType.FIREFOX))&& trigger.equalsIgnoreCase("remote")) {
                     FirefoxOptions options = new FirefoxOptions();
                     driver.set(new RemoteWebDriver(gridUrl, options));
-                }else if (browser.equalsIgnoreCase("chrome")&& trigger.equalsIgnoreCase("local")) {
+                }else if (browser.equalsIgnoreCase(String.valueOf(DriverType.CHROME))&& trigger.equalsIgnoreCase("local")) {
                     driver.set(new ChromeDriver());
-                }else if (browser.equalsIgnoreCase("firefox")&& trigger.equalsIgnoreCase("local")) {
+                }else if (browser.equalsIgnoreCase(String.valueOf(DriverType.FIREFOX))&& trigger.equalsIgnoreCase("local")) {
                     System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
                     driver.set(new FirefoxDriver());
                 }

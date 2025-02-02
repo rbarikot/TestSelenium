@@ -19,7 +19,6 @@
         <zerocell.version>0.3.2</zerocell.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <browser>${browser}</browser>
         </properties>
 
     <build>
@@ -29,9 +28,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <systemPropertyVariables>
-                        <browser>${browser}</browser>
-                    </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>./TestNg1.xml</suiteXmlFile>
                     </suiteXmlFiles>
