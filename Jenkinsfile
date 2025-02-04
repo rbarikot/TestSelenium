@@ -21,6 +21,24 @@ pipeline {
                 git branch: 'master' , url:'https://github.com/rbarikot/TestSelenium.git'
             }
         }
+        stage{
+        steps {
+            script {
+                            def images = ["image1", "image2"]  // Replace with actual image names from docker-compose.yml
+                            def runningContainers = sh(script: "docker ps --format '{{.Image}}'", returnStdout: true).trim().split("\n")
+
+                            def isRunning = images.every { img -> runningContainers.contains(img) }
+
+                            if (isRunning) {
+                                echo "Docker containers are already running. Skipping docker-compose up."
+                                env.SKIP_COMPOSE = "true"
+                            } else {
+                                echo "Containers are not running. Proceeding with docker-compose up."
+                                env.SKIP_COMPOSE = "false"
+                            }
+                        }
+                    }
+        }
 
         stage('Start Docker Compose') {
             steps {
