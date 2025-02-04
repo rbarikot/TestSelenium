@@ -24,7 +24,7 @@ pipeline {
         stage{
         steps {
             script {
-                            def images = ["image1", "image2"]  // Replace with actual image names from docker-compose.yml
+                            def images = ["selenium/video:ffmpeg-4.3.1-20221219 ", "selenium/node-edge:4.7.2-20221219 ", "selenium/node-chrome:4.7.2-20221219" ,"selenium/node-firefox:4.7.2-20221219","selenium/hub:4.7.2-20221219"]  // Replace with actual image names from docker-compose.yml
                             def runningContainers = sh(script: "docker ps --format '{{.Image}}'", returnStdout: true).trim().split("\n")
 
                             def isRunning = images.every { img -> runningContainers.contains(img) }
