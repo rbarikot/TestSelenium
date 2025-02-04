@@ -1,14 +1,14 @@
 pipeline {
     agent any
-     parameters {
-                string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for testing')
-                string(name: 'TRIGGER', defaultValue: 'local', description: 'Browser to use for testing')
-                }
-    tools {
+     tools {
         maven 'mvn'  // Adjust according to your Maven installation
         jdk 'JDK'  // Adjust according to your Java version
         allure 'Allure'
     }
+    parameters {
+                    string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for testing')
+                    string(name: 'TRIGGER', defaultValue: 'local', description: 'Browser to use for testing')
+                    }
 
     stages {
         stage('check Git version') {
@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests using Maven
-                    bat 'mvn clean test -Dbrowser=BROWSER -Dtrigger=TRIGGER'
+                    bat 'mvn clean test -Dbrowser=${BROWSER} -Dtrigger=${TRIGGER}'
                 }
             }
         }
