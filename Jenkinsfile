@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests using Maven
-                    bat 'mvn clean test -Dbrowser=${BROWSER} -Dtrigger=${TRIGGER}'
+                    bat 'mvn clean test -Dbrowser=BROWSER -Dtrigger=TRIGGER'
                 }
             }
         }

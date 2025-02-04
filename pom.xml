@@ -19,8 +19,8 @@
         <zerocell.version>0.3.2</zerocell.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <browser>${browser}</browser>
-        <trigger>${trigger}</trigger>
+        <browser>browser</browser>
+        <trigger>trigger</trigger>
         </properties>
 
     <build>
