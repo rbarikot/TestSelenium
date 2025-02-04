@@ -12,6 +12,7 @@ public class LoginTest extends BaseTest {
         LoginPage login = new LoginPage(driver);
         System.out.println(driver);
         login.login("admin", "admin");
+        System.out.println("The title of the login page: " + driver.getTitle());
     }
     @Test
     @Description("Test To Validate Opening of Different Browser")
@@ -19,5 +20,6 @@ public class LoginTest extends BaseTest {
         System.out.println(driver);
         driver.get("https://www.google.com");
         Thread.sleep(5000);
+        System.out.println("The title of the login page: " + driver.getTitle());
     }
 }

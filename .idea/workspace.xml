@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7fcfc4e-744f-41e7-ba0d-6380117f1d35" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/UI/test/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/UI/test/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/UI/test/tests/NavigatingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/UI/test/tests/NavigatingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +198,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738129355948</updated>
       <workItem from="1738129356898" duration="22879000" />
-      <workItem from="1738463387641" duration="18549000" />
+      <workItem from="1738463387641" duration="22550000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

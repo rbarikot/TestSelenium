@@ -12,5 +12,6 @@ public class NavigatingTest extends BaseTest {
         System.out.println(driver);
         driver.get("https://www.google.com");
         Thread.sleep(5000);
+       System.out.println("The title of the login page: " + driver.getTitle());
     }
 }
