@@ -21,6 +21,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <browser>browser</browser>
         <trigger>trigger</trigger>
+        <suite>suite</suite>
         </properties>
 
     <build>
@@ -32,11 +33,12 @@
                 <configuration>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>./TestNg1.xml</suiteXmlFile>
+                        <suiteXmlFile>./suite/${suite}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <browser>${browser}</browser>
                         <trigger>${trigger}</trigger>
+                        <suite>${suite}</suite>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

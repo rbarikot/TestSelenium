@@ -7,7 +7,8 @@ pipeline {
     }
     parameters {
                     string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for testing')
-                    string(name: 'TRIGGER', defaultValue: 'local', description: 'Browser to use for testing')
+                    string(name: 'TRIGGER', defaultValue: 'local', description: 'options to run either on local or remote')
+                    string(name: 'SUITE', defaultValue: 'smoke', description: 'which suite to run')
                     }
 
     stages {
@@ -35,7 +36,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests using Maven
-                    bat "mvn clean test -Dbrowser=%BROWSER% -Dtrigger=%TRIGGER%"
+                    bat "mvn clean test -Dbrowser=%BROWSER% -Dtrigger=%TRIGGER% -Dsuite=%SUITE%"
                 }
             }
         }

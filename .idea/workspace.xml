@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7fcfc4e-744f-41e7-ba0d-6380117f1d35" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/suite/smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestNg1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/suite/regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/UI/test/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/UI/test/base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +70,7 @@
     "TestNG.LoginTest1.testLogin.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rbarik/Desktop/DA RC/Workspace/ProwessSeleniumTest",
+    "last_opened_file_path": "C:/Users/rbarik/Desktop/DA RC/Workspace/ProwessSeleniumTest/suite",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,7 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rbarik\Desktop\DA RC\Workspace\ProwessSeleniumTest\suite" />
       <recent name="C:\Users\rbarik\Desktop\DA RC\Workspace\ProwessSeleniumTest" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rbarik\Desktop\DA RC\Workspace\ProwessSeleniumTest\suite" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.UI.test.tests" />
@@ -196,7 +205,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738129355948</updated>
       <workItem from="1738129356898" duration="22879000" />
-      <workItem from="1738463387641" duration="24619000" />
+      <workItem from="1738463387641" duration="29041000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
