@@ -17,8 +17,8 @@
         <Webdrivermanager.version>5.9.2</Webdrivermanager.version>
         <extentReport.version>5.1.2</extentReport.version>
         <zerocell.version>0.3.2</zerocell.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <browser>browser</browser>
         <trigger>trigger</trigger>
         <suite>suite</suite>
@@ -29,16 +29,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>3.5.2</version>
                 <configuration>
 
-                    <suiteXmlFiles>
-                        <suiteXmlFile>./suite/${suite}.xml</suiteXmlFile>
-                    </suiteXmlFiles>
                     <systemPropertyVariables>
                         <browser>${browser}</browser>
                         <trigger>${trigger}</trigger>
                         <suite>${suite}</suite>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>./suite/${suite}.xml</suiteXmlFile>
+                        </suiteXmlFiles>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -91,7 +91,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.34</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
